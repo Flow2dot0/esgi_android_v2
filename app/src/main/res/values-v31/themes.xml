@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.EsgiAndroid" parent="BaseTheme">
+    <style name="SplashActivity">
         <!-- Point 3-->
         <item name="android:windowSplashScreenBackground">@android:color/background_light</item>
         <!-- Point 2-->
@@ -9,5 +9,7 @@
         <!-- Point 4-->
 <!--        <item name="android:windowSplashScreenBrandingImage">-->
 <!--            @drawable/relam_horizontal</item>-->
+<!--        <item name="postSplashScreenTheme">@android:color/background_light</item>-->
+
     </style>
 </resources>
