@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mon comparateur</string>
+    <string name="product_name"></string>
+    <string name="brand"></string>
+    <string name="barcode">Code barres : %1$s</string>
+    <string name="quantity">Quantité : %1$s</string>
+    <string name="sold">Vendu au : %1$s</string>
+    <string name="ingredients">Ingrédients : %1$s</string>
+    <string name="allergenes">Substances allergènes : %1$s</string>
+    <string name="additives">Additifs : %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
