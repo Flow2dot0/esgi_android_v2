@@ -1,4 +1,4 @@
-package com.florian.esgiandroid.presentation
+package com.florian.esgiandroid.presentation.pages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.florian.esgiandroid.R
 import com.florian.esgiandroid.domain.DefaultProduct
+import com.florian.esgiandroid.presentation.formatItemsFromList
+import com.florian.esgiandroid.presentation.setSpannableTextBold
 import com.squareup.picasso.Picasso
 
 class ProductActivity : AppCompatActivity() {

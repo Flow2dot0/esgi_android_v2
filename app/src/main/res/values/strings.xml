@@ -31,6 +31,11 @@
     <string name="salt">Sel</string>
     <string name="sodium">Sodium</string>
 
+    <string name="products_empty_scan_not_scanned_yet">Vous n\'avez rien encore scanné</string>
+    <string name="products_empty_scan_info_button">Cliquez sur le bouton ci-dessous pour commencer.</string>
+    <string name="products_empty_scan_button_title">scanner un produit</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

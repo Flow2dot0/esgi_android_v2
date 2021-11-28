@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.florian.esgiandroid">
+    package="com.florian.esgiandroid" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,9 +11,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/SplashScreen">
+        android:theme="@style/SplashScreen" >
         <activity
-            android:name=".presentation.ProductsActivity"
+            android:name=".presentation.pages.ProductsEmptyScanActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,18 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.NutrientsInfosActivity"
-            android:exported="true">
+            android:name=".presentation.pages.ProductsActivity"
+            android:exported="true" >
 
         </activity>
         <activity
-            android:name=".presentation.ProductDetailActivity"
-            android:exported="true"></activity>
+            android:name=".presentation.pages.NutrientsInfosActivity"
+            android:exported="true" >
+        </activity>
         <activity
-            android:name=".presentation.ProductActivity"
+            android:name=".presentation.pages.ProductDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".presentation.PlaygroundActivity"
+            android:name=".presentation.pages.ProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.pages.PlaygroundActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

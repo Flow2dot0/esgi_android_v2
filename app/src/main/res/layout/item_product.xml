@@ -42,8 +42,7 @@
                     app:layout_constraintTop_toTopOf="@id/item_product_cl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/product_name"
-                    />
+                    android:text="@string/product_name" />
 
                 <ImageView
                     android:layout_width="18dp"
@@ -61,6 +60,7 @@
                     android:id="@+id/item_product_brand"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_marginTop="10dp"
                     app:layout_constraintTop_toBottomOf="@id/item_product_brand"
@@ -68,6 +68,7 @@
                     android:layout_width="match_parent"
                     android:gravity="center_vertical"
                     android:layout_height="25dp">
+
                     <ImageView
                         android:src="@drawable/ranking"
                         android:layout_width="25dp"

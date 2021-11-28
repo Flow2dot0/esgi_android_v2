@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_constraintWidth_default="percent"
     android:background="@color/white"
-    tools:context=".presentation.NutrientsInfosActivity">
+    tools:context=".presentation.pages.NutrientsInfosActivity">
 
 
     <com.florian.esgiandroid.presentation.molecules.TableCellView

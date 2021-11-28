@@ -1,4 +1,4 @@
-package com.florian.esgiandroid.presentation
+package com.florian.esgiandroid.presentation.pages
 
 import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.core.graphics.drawable.DrawableCompat
 import com.florian.esgiandroid.R
 import com.florian.esgiandroid.domain.*
-import java.math.RoundingMode
-import java.text.DecimalFormat
+import com.florian.esgiandroid.presentation.toDecimal2
 
 class ProductDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

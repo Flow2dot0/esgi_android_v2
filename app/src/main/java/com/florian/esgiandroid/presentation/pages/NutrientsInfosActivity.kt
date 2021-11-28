@@ -1,11 +1,11 @@
-package com.florian.esgiandroid.presentation
+package com.florian.esgiandroid.presentation.pages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.florian.esgiandroid.R
 import com.florian.esgiandroid.domain.DefaultProduct
-import com.florian.esgiandroid.domain.NutritionsFactsItem
+import com.florian.esgiandroid.presentation.format
 
 class NutrientsInfosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

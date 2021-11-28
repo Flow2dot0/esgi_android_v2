@@ -1,4 +1,4 @@
-package com.florian.esgiandroid.presentation
+package com.florian.esgiandroid.presentation.pages
 
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
