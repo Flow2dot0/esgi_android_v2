@@ -10,6 +10,7 @@ interface NutritionFacts {
     val proteins : NutritionsFactsItem
     val salt : NutritionsFactsItem
     val sodium : NutritionsFactsItem
+    val calories : NutritionsFactsItem
 }
 
 class DefaultNutritionFacts(
@@ -21,7 +22,7 @@ class DefaultNutritionFacts(
     override val fibers: NutritionsFactsItem,
     override val proteins: NutritionsFactsItem,
     override val salt: NutritionsFactsItem,
-    override val sodium: NutritionsFactsItem
+    override val sodium: NutritionsFactsItem, override val calories: NutritionsFactsItem
 ) : NutritionFacts{
 
     companion object {
@@ -71,6 +72,11 @@ class DefaultNutritionFacts(
                     "g",
                     null,
                     0.295,
+                ),
+                DefaultNutritionsFactsItem(
+                    "kCal",
+                    null,
+                    234.00,
                 ),
             )
         }

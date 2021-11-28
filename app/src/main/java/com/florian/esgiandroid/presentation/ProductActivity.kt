@@ -19,7 +19,7 @@ class ProductActivity : AppCompatActivity() {
             .load(product.imageUrl)
             .placeholder(R.drawable.petitspoidscarottes)
             .error(R.drawable.petitspoidscarottes)
-            .into(posterView);
+            .into(posterView)
         findViewById<TextView>(R.id.title).text = product.name
         findViewById<TextView>(R.id.brand).text = product.brand
         setSpannableTextViewBold(makeTextView(R.id.barcode), R.string.barcode, product.barcode.toString())
