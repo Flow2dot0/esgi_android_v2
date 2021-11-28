@@ -1,4 +1,4 @@
-package com.florian.esgiandroid
+package com.florian.esgiandroid.presentation
 
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.text.style.StyleSpan
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import com.florian.esgiandroid.R
 
 class PlaygroundActivity : AppCompatActivity() {
     private val TAG = "PlaygroundActivity"

@@ -8,6 +8,17 @@
     <string name="ingredients">Ingrédients : %1$s</string>
     <string name="allergenes">Substances allergènes : %1$s</string>
     <string name="additives">Additifs : %1$s</string>
+    <string name="nutrients_landmark">Repères nutritionnels pour 100g</string>
+    <string name="nutrients_fats">%1$s g de matières grasses / lipides</string>
+    <string name="nutrients_satured_fats">%1$s g d\'\acides gras saturés</string>
+    <string name="nutrients_sugars">%1$s g de sucres</string>
+    <string name="nutrients_salt">%1$s g de sel</string>
+
+    <string name="nutrients_low">en faible quantité</string>
+    <string name="nutrients_moderate">en quantité modérée</string>
+    <string name="nutrients_high">en quantité élevée</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
