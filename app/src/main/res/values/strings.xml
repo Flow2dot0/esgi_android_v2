@@ -17,6 +17,21 @@
     <string name="nutrients_low">en faible quantité</string>
     <string name="nutrients_moderate">en quantité modérée</string>
     <string name="nutrients_high">en quantité élevée</string>
+
+    <string name="per_100g">Pour 100g</string>
+    <string name="per_part">Par part</string>
+
+    <string name="energy">Énergie</string>
+    <string name="fats">Matières grasses</string>
+    <string name="satured_fats">dont Acides gras saturées</string>
+    <string name="glucids">Glucides</string>
+    <string name="sugars">dont Sucres</string>
+    <string name="fibers">Fibres alimentaires</string>
+    <string name="proteins">Protéines</string>
+    <string name="salt">Sel</string>
+    <string name="sodium">Sodium</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

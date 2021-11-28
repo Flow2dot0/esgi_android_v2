@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.florian.esgiandroid.domain.NutritionsFactsItem
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.util.concurrent.Executors
@@ -31,6 +32,8 @@ fun Double.toDecimal2(): String {
     df.roundingMode = RoundingMode.CEILING
     return df.format(this)
 }
+
+fun NutritionsFactsItem.format() : StringBuilder = StringBuilder().append(this.quantityPer100g.toString()).append(" ").append(this.unit)
 
 fun loadImage (imageView : ImageView, imageURL : String) : Unit {
     // Declaring executor to parse the URL
