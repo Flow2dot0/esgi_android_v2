@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/SplashScreen">
         <activity
-            android:name=".presentation.NutrientsInfosActivity"
+            android:name=".presentation.ProductsActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,18 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.ProductDetailActivity"
+            android:name=".presentation.NutrientsInfosActivity"
             android:exported="true">
+
         </activity>
         <activity
-            android:name=".presentation.ProductActivity"
+            android:name=".presentation.ProductDetailActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".presentation.ProductActivity"
+            android:exported="true" />
         <activity
             android:name=".presentation.PlaygroundActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
