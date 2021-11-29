@@ -5,10 +5,15 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.florian.esgiandroid.application.ApplicationEngine
+import com.florian.esgiandroid.application.ProductsApplication
 import com.florian.esgiandroid.domain.DefaultProduct
 import com.florian.esgiandroid.presentation.organisms.ProductAdapter
+import com.florian.esgiandroid.presentation.organisms.ProductsFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private val application : ApplicationEngine = ProductsApplication.INSTANCE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,12 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.toolbar_drawable))
 
-        val fragment = ProductsFragment.newInstance("", "");
-
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.container_view1, fragment)
+                .replace(R.id.container_view1, ProductsFragment())
                 .commitAllowingStateLoss()
         }
     }

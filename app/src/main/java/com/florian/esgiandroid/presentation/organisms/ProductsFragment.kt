@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.florian.esgiandroid.R
+import com.florian.esgiandroid.application.ApplicationEngine
+import com.florian.esgiandroid.application.ProductsApplication
 import com.florian.esgiandroid.domain.DefaultProduct
 import com.florian.esgiandroid.presentation.organisms.ProductAdapter
 
@@ -25,7 +27,7 @@ class ProductsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private val adapter = ProductAdapter(arrayOf(DefaultProduct.dummy(), DefaultProduct.dummy()))
+    private val application : ApplicationEngine = ProductsApplication.INSTANCE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,21 +41,11 @@ class ProductsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_products, container, false)
-
-        val recyclerView = v.findViewById<RecyclerView>(R.id.products_rv)
-        recyclerView.layoutManager = LinearLayoutManager(v.context)
-        recyclerView.adapter = adapter
-
-        return v
+    ): View {
+        return application.attachToRecyclerView(ProductAdapter(arrayOf(DefaultProduct.dummy(), DefaultProduct.dummy())), inflater, container, savedInstanceState)
     }
 
     companion object {
-
-
-
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
