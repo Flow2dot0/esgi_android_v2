@@ -22,7 +22,7 @@ class ProductAdapter(val products : Array<Product>) : RecyclerView.Adapter<Produ
         PicassoImageLoader().loadInto(imageUrl = product.imageUrl, destination = holder.banner)
         holder.name.text = product.name
         holder.brand.text = product.brand
-        holder.nutriscore.text = product.nutriscore.substring(product.nutriscore.length-1, product.nutriscore.length)
+        holder.nutriscore.text = product.nutriscore.substring(product.nutriscore.length-1, product.nutriscore.length).uppercase()
         holder.calories.text = product.nutritionFacts.calories.quantityPer100g.toString()
     }
 

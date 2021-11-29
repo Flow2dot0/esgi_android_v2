@@ -12,18 +12,22 @@
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.3037037037037037" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.3323076923076923" />
         <entry key="app/src/main/res/drawable/toolbar_drawable.xml" value="0.3037037037037037" />
+        <entry key="app/src/main/res/layout-land/main_activity.xml" value="0.27292768959435626" />
         <entry key="app/src/main/res/layout-v23/activity_products_empty_scan.xml" value="0.32608695652173914" />
         <entry key="app/src/main/res/layout/activity_food_detail.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.23148148148148148" />
         <entry key="app/src/main/res/layout/activity_nutrients_infos.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_playground.xml" value="0.2621580547112462" />
         <entry key="app/src/main/res/layout/activity_product.xml" value="0.29846014492753625" />
-        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_products.xml" value="0.32608695652173914" />
         <entry key="app/src/main/res/layout/activity_products_empty_scan.xml" value="0.32608695652173914" />
         <entry key="app/src/main/res/layout/elevated_rounded_button.xml" value="0.32608695652173914" />
-        <entry key="app/src/main/res/layout/fragment_product_details.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/fragment.xml" value="0.3223958333333333" />
+        <entry key="app/src/main/res/layout/fragment_product_detail.xml" value="0.16058763931104356" />
+        <entry key="app/src/main/res/layout/fragment_product_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_product_details_summary.xml" value="0.32608695652173914" />
+        <entry key="app/src/main/res/layout/fragment_products.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_products_list.xml" value="0.3125" />
         <entry key="app/src/main/res/layout/item_product.xml" value="0.32608695652173914" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.2624113475177305" />
