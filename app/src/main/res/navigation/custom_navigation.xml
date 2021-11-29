@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/productsFragment"
-        android:name="com.florian.esgiandroid.ProductsFragment"
+        android:name="com.florian.esgiandroid.presentation.organisms.ProductsFragment"
         android:label="fragment_products"
         tools:layout="@layout/fragment_products" />
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="com.florian.esgiandroid.ProductDetailFragment"
+        android:name="com.florian.esgiandroid.presentation.organisms.ProductDetailsFragment"
         android:label="fragment_product_detail"
-        tools:layout="@layout/fragment_product_detail" />
+        tools:layout="@layout/fragment_product_details" />
 </navigation>

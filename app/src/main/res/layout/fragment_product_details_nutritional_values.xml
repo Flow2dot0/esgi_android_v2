@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_constraintWidth_default="percent"
+android:background="@color/white"
+tools:context=".presentation.organisms.ProductDetailsNutritionalValuesFragment">
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:text=""
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r1"
+    app:layout_constraintLeft_toRightOf="@id/c1_r1"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text="@string/per_100g"
+    android:textStyle="bold"
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r1"
+    app:layout_constraintLeft_toRightOf="@id/c2_r1"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="@string/per_part"
+    android:textStyle="bold"
+    app:border="bottom" />
+
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r2"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r1"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/energy"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r2"
+    app:layout_constraintLeft_toRightOf="@id/c1_r2"
+    app:layout_constraintTop_toBottomOf="@id/c2_r1"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r2"
+    app:layout_constraintLeft_toRightOf="@id/c2_r2"
+    app:layout_constraintTop_toBottomOf="@id/c3_r1"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r3"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r2"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/fats"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r3"
+    app:layout_constraintLeft_toRightOf="@id/c1_r3"
+    app:layout_constraintTop_toBottomOf="@id/c2_r2"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r3"
+    app:layout_constraintLeft_toRightOf="@id/c2_r3"
+    app:layout_constraintTop_toBottomOf="@id/c3_r2"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r4"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r3"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/satured_fats"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r4"
+    app:layout_constraintLeft_toRightOf="@id/c1_r4"
+    app:layout_constraintTop_toBottomOf="@id/c2_r3"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r4"
+    app:layout_constraintLeft_toRightOf="@id/c2_r4"
+    app:layout_constraintTop_toBottomOf="@id/c3_r3"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r5"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r4"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/glucids"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r5"
+    app:layout_constraintLeft_toRightOf="@id/c1_r5"
+    app:layout_constraintTop_toBottomOf="@id/c2_r4"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r5"
+    app:layout_constraintLeft_toRightOf="@id/c2_r5"
+    app:layout_constraintTop_toBottomOf="@id/c3_r4"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r6"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r5"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/sugars"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r6"
+    app:layout_constraintLeft_toRightOf="@id/c1_r6"
+    app:layout_constraintTop_toBottomOf="@id/c2_r5"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r6"
+    app:layout_constraintLeft_toRightOf="@id/c2_r6"
+    app:layout_constraintTop_toBottomOf="@id/c3_r5"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r7"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r6"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/fibers"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r7"
+    app:layout_constraintLeft_toRightOf="@id/c1_r7"
+    app:layout_constraintTop_toBottomOf="@id/c2_r6"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r7"
+    app:layout_constraintLeft_toRightOf="@id/c2_r7"
+    app:layout_constraintTop_toBottomOf="@id/c3_r6"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r8"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r7"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/proteins"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r8"
+    app:layout_constraintLeft_toRightOf="@id/c1_r8"
+    app:layout_constraintTop_toBottomOf="@id/c2_r7"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r8"
+    app:layout_constraintLeft_toRightOf="@id/c2_r8"
+    app:layout_constraintTop_toBottomOf="@id/c3_r7"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r9"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r8"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/salt"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r9"
+    app:layout_constraintLeft_toRightOf="@id/c1_r9"
+    app:layout_constraintTop_toBottomOf="@id/c2_r8"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r9"
+    app:layout_constraintLeft_toRightOf="@id/c2_r9"
+    app:layout_constraintTop_toBottomOf="@id/c3_r8"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c1_r10"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/c1_r9"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.5"
+    android:layout_height="50dp"
+    android:layout_weight="70"
+    android:text="@string/sodium"
+    android:paddingStart="10dp"
+    android:paddingEnd="0dp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c2_r10"
+    app:layout_constraintLeft_toRightOf="@id/c1_r10"
+    app:layout_constraintTop_toBottomOf="@id/c2_r9"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:text=""
+    android:gravity="center"
+    app:border="right|bottom" />
+<com.florian.esgiandroid.presentation.molecules.TableCellView
+    android:id="@+id/c3_r10"
+    app:layout_constraintLeft_toRightOf="@id/c2_r10"
+    app:layout_constraintTop_toBottomOf="@id/c3_r9"
+    android:layout_width="0dp"
+    app:layout_constraintWidth_percent="0.25"
+    android:layout_height="50dp"
+    android:layout_weight="15"
+    android:gravity="center"
+    android:text="\?"
+    app:border="bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,6 @@ class ProductsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private val application : ApplicationEngine = ProductsApplication.INSTANCE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +41,16 @@ class ProductsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return application.attachToRecyclerView(ProductAdapter(arrayOf(DefaultProduct.dummy(), DefaultProduct.dummy())), inflater, container, savedInstanceState)
+        return attachToRecyclerView(ProductAdapter(arrayOf(DefaultProduct.dummy(), DefaultProduct.dummy())), inflater, container, savedInstanceState)
+    }
+
+    fun attachToRecyclerView(adapter : ProductAdapter, inflater: LayoutInflater, container: ViewGroup?,
+                                      savedInstanceState: Bundle?) : View {
+        val v = inflater.inflate(R.layout.fragment_products, container, false)
+        val recyclerView = v.findViewById<RecyclerView>(R.id.products_rv)
+        recyclerView.layoutManager = LinearLayoutManager(v.context)
+        recyclerView.adapter = adapter
+        return v
     }
 
     companion object {

@@ -5,18 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import com.florian.esgiandroid.R
+import com.florian.esgiandroid.domain.DefaultProduct
+import com.florian.esgiandroid.presentation.formatItemsFromList
+import com.florian.esgiandroid.presentation.makeTextView
+import com.florian.esgiandroid.presentation.setSpannableTextBold
+import com.squareup.picasso.Picasso
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ProductDetailsSummaryFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProductDetailsSummaryFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -34,20 +34,31 @@ class ProductDetailsSummaryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_details_summary, container, false)
+        val v = inflater.inflate(R.layout.fragment_product_details_summary, container, false)
+        val product = DefaultProduct.dummy()
+        val posterView = v.findViewById<ImageView>(R.id.posterView);
+        Picasso.get()
+            .load(product.imageUrl)
+            .placeholder(R.drawable.petitspoidscarottes)
+            .error(R.drawable.petitspoidscarottes)
+            .into(posterView)
+        v.findViewById<TextView>(R.id.title).text = product.name
+        v.findViewById<TextView>(R.id.brand).text = product.brand
+        setSpannableTextViewBold(makeTextView(v, R.id.barcode), R.string.barcode, product.barcode.toString())
+        setSpannableTextViewBold(makeTextView(v, R.id.quantity), R.string.quantity, product.toString())
+        setSpannableTextViewBold(makeTextView(v, R.id.sold), R.string.sold, product.countries.formatItemsFromList())
+        setSpannableTextViewBold(makeTextView(v, R.id.ingredients), R.string.ingredients, product.ingredients.formatItemsFromList())
+        setSpannableTextViewBold(makeTextView(v, R.id.allergenes), R.string.allergenes, product.allergenes.formatItemsFromList())
+        setSpannableTextViewBold(makeTextView(v, R.id.additives), R.string.additives, product.additives.formatItemsFromList())
+        return v
     }
 
+    private fun setSpannableTextViewBold(textView: TextView, rString : Int, args : String){
+        textView.setSpannableTextBold(getString(rString, args))
+    }
+
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProductDetailsSummaryFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ProductDetailsSummaryFragment().apply {
