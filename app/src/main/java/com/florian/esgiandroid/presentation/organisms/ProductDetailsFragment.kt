@@ -19,7 +19,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ProductDetailsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ProductDetailsFragment : Fragment() {
+class ProductDetailsFragment : Fragment(R.layout.fragment_product_details) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,8 +36,8 @@ class ProductDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val navHost = childFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment
-        NavigationUI.setupWithNavController(product_details_bottom_nav, navHost.navController)
+//        val navHost = childFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment
+//        NavigationUI.setupWithNavController(product_details_bottom_nav, navHost.navController)
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_product_details, container, false)
