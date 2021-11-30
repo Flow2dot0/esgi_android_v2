@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.commit
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.florian.esgiandroid.databinding.MainActivityBinding
 import com.florian.esgiandroid.presentation.organisms.ProductDetailsFragment
 
@@ -12,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
         binding = MainActivityBinding.inflate(layoutInflater)
         val view = binding.root
@@ -24,13 +25,10 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.toolbar_drawable
             )
         )
+//        val navHost = supportFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment
+//        setupActionBarWithNavController(navHost.navController)
 
-        if (savedInstanceState == null) {
 
-            supportFragmentManager.commit {
-                add(R.id.container_view1, ProductDetailsFragment())
-                setReorderingAllowed(true)
-            }
-        }
+
     }
 }

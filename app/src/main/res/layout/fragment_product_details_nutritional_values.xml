@@ -87,8 +87,6 @@ tools:context=".presentation.organisms.ProductDetailsNutritionalValuesFragment">
     app:border="bottom" />
 
 
-
-
 <com.florian.esgiandroid.presentation.molecules.TableCellView
     android:id="@+id/c1_r3"
     app:layout_constraintLeft_toLeftOf="parent"

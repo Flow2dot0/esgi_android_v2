@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.florian.esgiandroid.R
 import com.florian.esgiandroid.domain.PicassoImageLoader
@@ -14,7 +15,10 @@ class ProductAdapter(val products : Array<Product>) : RecyclerView.Adapter<Produ
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val viewItem = inflater.inflate(R.layout.item_product, parent, false)
-        return ViewHolder(viewItem)
+        return ViewHolder(viewItem).listen { position, type ->
+            println(position)
+            viewItem.findNavController().navigate(R.id.productDetailsFragment)
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -34,7 +38,13 @@ class ProductAdapter(val products : Array<Product>) : RecyclerView.Adapter<Produ
         val brand = itemView.findViewById<TextView>(R.id.item_product_brand)
         val nutriscore = itemView.findViewById<TextView>(R.id.item_product_value_nutriscore)
         val calories = itemView.findViewById<TextView>(R.id.item_product_value_calories)
+    }
 
+    fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
+        itemView.setOnClickListener {
+            event.invoke(getAdapterPosition(), getItemViewType())
+        }
+        return this
     }
 }
 
