@@ -22,7 +22,6 @@ class ProductDetailsFragment : Fragment(R.layout.fragment_product_details) {
         arguments?.let {
             val param1 = it.getParcelable<DefaultProduct>("product")
             model.set(param1!!)
-            println(model.product)
         }
     }
 

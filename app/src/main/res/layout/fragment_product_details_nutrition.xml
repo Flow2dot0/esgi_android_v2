@@ -30,7 +30,7 @@
             android:layout_height="20dp"
             android:layout_margin="10dp"
             android:contentDescription=""
-            android:src="@drawable/circle_low"
+            android:background="@drawable/circle"
             app:layout_constraintBottom_toBottomOf="@id/tile"
             app:layout_constraintLeft_toLeftOf="@id/tile"
             app:layout_constraintTop_toTopOf="@id/tile" />
@@ -68,7 +68,7 @@
             android:layout_height="20dp"
             android:layout_margin="10dp"
             android:contentDescription=""
-            android:src="@drawable/circle_low"
+            android:background="@drawable/circle"
             app:layout_constraintBottom_toBottomOf="@id/tile2"
             app:layout_constraintLeft_toLeftOf="@id/tile2"
             app:layout_constraintTop_toTopOf="@id/tile2" />
@@ -107,7 +107,7 @@
             android:layout_height="20dp"
             android:layout_margin="10dp"
             android:contentDescription=""
-            android:src="@drawable/circle_moderate"
+            android:background="@drawable/circle"
             app:layout_constraintBottom_toBottomOf="@id/tile3"
             app:layout_constraintLeft_toLeftOf="@id/tile3"
             app:layout_constraintTop_toTopOf="@id/tile3" />
@@ -146,7 +146,7 @@
             android:layout_height="20dp"
             android:layout_margin="10dp"
             android:contentDescription=""
-            android:src="@drawable/circle_high"
+            android:background="@drawable/circle"
             app:layout_constraintBottom_toBottomOf="@id/tile4"
             app:layout_constraintLeft_toLeftOf="@id/tile4"
             app:layout_constraintTop_toTopOf="@id/tile4" />

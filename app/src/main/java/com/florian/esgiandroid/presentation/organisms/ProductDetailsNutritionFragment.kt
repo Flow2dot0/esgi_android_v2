@@ -1,6 +1,7 @@
 package com.florian.esgiandroid.presentation.organisms
 
 import android.content.res.ColorStateList
+import android.graphics.ColorFilter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -73,7 +74,6 @@ class ProductDetailsNutritionFragment : Fragment() {
             SaltQuantity(product.nutritionFacts.salt.quantityPer100g),
             v
         )
-
         return v
 
     }
@@ -88,9 +88,10 @@ class ProductDetailsNutritionFragment : Fragment() {
         view: View
     ): Unit {
 
+        val color = quantity.getColor()
         DrawableCompat.setTintList(
-            view.findViewById<ImageView>(circleId).drawable,
-            ColorStateList.valueOf(quantity.getColor())
+            view.findViewById<ImageView>(circleId).background,
+            ColorStateList.valueOf(requireContext().getColor(color))
         )
         setTextViewBold(view.findViewById(textId), rString, args)
         view.findViewById<TextView>(subTextId).setText(quantity.getText())

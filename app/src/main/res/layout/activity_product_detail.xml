@@ -31,7 +31,7 @@
             android:layout_margin="10dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/circle_low"
+            android:src="@drawable/circle"
             android:id="@+id/circle_level"
             android:contentDescription=""
             />
@@ -69,7 +69,7 @@
             android:layout_margin="10dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/circle_low"
+            android:src="@drawable/circle"
             android:id="@+id/circle_level2"
             android:contentDescription=""
             />
