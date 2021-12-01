@@ -6,6 +6,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
 import java.net.URL
+import kotlin.random.Random
 
 interface Product {
     val name: String
@@ -19,6 +20,8 @@ interface Product {
     val allergenes: List<String>
     val additives: List<String>
     val nutritionFacts : NutritionFacts
+
+    fun updateBarcode(barcode: Long) : DefaultProduct
 }
 
 
@@ -35,6 +38,22 @@ data class DefaultProduct(
     override val allergenes: List<String>,
     override val additives: List<String>, override val nutritionFacts: @RawValue NutritionFacts,
 ) : Product, Parcelable {
+
+    override fun updateBarcode(barcode: Long) : DefaultProduct {
+        return DefaultProduct(
+            this.name,
+            this.brand,
+            barcode,
+            this.nutriscore,
+            this.imageUrl,
+            this.quantity,
+            this.countries,
+            this.ingredients,
+            this.allergenes,
+            this.additives,
+            DefaultNutritionFacts.from(this.nutritionFacts)
+        )
+    }
 
     companion object {
         fun dummy(): Product {
@@ -99,6 +118,12 @@ data class DefaultProduct(
                 product.additives,
                 DefaultNutritionFacts.from(product.nutritionFacts)
             )
+        }
+
+        fun generateDummy() : Product{
+            val l = listOf<Product>(dummy(), dummy2(), dummy3())
+            val rand = Random(0).nextInt(2)
+            return l[rand]
         }
 
     }

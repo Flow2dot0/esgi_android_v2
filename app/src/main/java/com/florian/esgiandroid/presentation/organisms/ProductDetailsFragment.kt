@@ -21,7 +21,7 @@ class ProductDetailsFragment : Fragment(R.layout.fragment_product_details) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             val param1 = it.getParcelable<DefaultProduct>("product")
-            model.set(param1!!)
+            model.onSelect(param1!!)
         }
     }
 

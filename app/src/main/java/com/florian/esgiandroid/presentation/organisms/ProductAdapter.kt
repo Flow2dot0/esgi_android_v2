@@ -12,7 +12,7 @@ import com.florian.esgiandroid.domain.DefaultProduct
 import com.florian.esgiandroid.domain.PicassoImageLoader
 import com.florian.esgiandroid.domain.Product
 
-class ProductAdapter(val products : Array<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ProductAdapter(val products : ArrayList<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val viewItem = inflater.inflate(R.layout.item_product, parent, false)

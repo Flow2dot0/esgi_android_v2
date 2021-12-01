@@ -1,18 +1,20 @@
 package com.florian.esgiandroid.application
 
-import android.content.ClipData
-import android.os.Bundle
-import android.view.View
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.florian.esgiandroid.domain.DefaultProduct
 import com.florian.esgiandroid.domain.Product
-import java.nio.channels.Selector
 
 class SharedViewModel : ViewModel() {
-    var product : DefaultProduct? = null
+    var product : Product? = null
+    val products : MutableList<Product> = mutableListOf()
 
-    fun set(item: DefaultProduct) {
+
+    fun add(item: Product) {
+        products.add(item)
+    }
+
+    fun onSelect(item: Product) {
         product = item
     }
+
+
 }

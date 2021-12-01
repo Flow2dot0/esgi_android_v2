@@ -17,7 +17,7 @@ import com.florian.esgiandroid.domain.*
 import com.florian.esgiandroid.presentation.toDecimal2
 
 class ProductDetailsNutritionFragment : Fragment() {
-    private val model : SharedViewModel by activityViewModels()
+    private val model: SharedViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -15,7 +15,7 @@ import com.florian.esgiandroid.presentation.organisms.ProductAdapter
 
 class ProductsActivity : AppCompatActivity() {
 
-    val adapter = ProductAdapter(arrayOf(DefaultProduct.dummy(),DefaultProduct.dummy()))
+    val adapter = ProductAdapter(arrayListOf(DefaultProduct.dummy(),DefaultProduct.dummy()))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
