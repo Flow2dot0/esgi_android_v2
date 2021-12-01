@@ -39,12 +39,13 @@ class ProductDetailsFragment : Fragment(R.layout.fragment_product_details) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val navHost = childFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment?
-        val v = inflater.inflate(R.layout.fragment_product_details, container, false)
+        return inflater.inflate(R.layout.fragment_product_details, container, false)
+    }
 
-        v.findViewById<BottomNavigationView>(R.id.product_details_bottom_nav)
-            .setupWithNavController(Navigation.findNavController(v))
-        return v
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val navHost = childFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment
+        NavigationUI.setupWithNavController(view.findViewById<BottomNavigationView>(R.id.product_details_bottom_nav), navHost.navController)
     }
 
     companion object {

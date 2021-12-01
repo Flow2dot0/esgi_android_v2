@@ -45,7 +45,7 @@ class ProductDetailsSummaryFragment : Fragment() {
         v.findViewById<TextView>(R.id.title).text = product.name
         v.findViewById<TextView>(R.id.brand).text = product.brand
         setSpannableTextViewBold(makeTextView(v, R.id.barcode), R.string.barcode, product.barcode.toString())
-        setSpannableTextViewBold(makeTextView(v, R.id.quantity), R.string.quantity, product.toString())
+        setSpannableTextViewBold(makeTextView(v, R.id.quantity), R.string.quantity, product.quantity)
         setSpannableTextViewBold(makeTextView(v, R.id.sold), R.string.sold, product.countries.formatItemsFromList())
         setSpannableTextViewBold(makeTextView(v, R.id.ingredients), R.string.ingredients, product.ingredients.formatItemsFromList())
         setSpannableTextViewBold(makeTextView(v, R.id.allergenes), R.string.allergenes, product.allergenes.formatItemsFromList())
