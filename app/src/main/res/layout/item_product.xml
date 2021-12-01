@@ -82,12 +82,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
-                        android:text="Nutriscore : "
+                        android:text="@string/nutriscore"
                         />
-
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
                     <TextView
                         android:id="@+id/item_product_value_nutriscore"
-                        android:text="A"
+                        android:text=""
                         android:textSize="14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -109,11 +111,12 @@
                         android:textSize="14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="234"
+                        android:text=""
                         />
 
                     <TextView
-                        android:text=" kCal/part"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/kcal_part"
                         android:textSize="14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

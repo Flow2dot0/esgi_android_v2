@@ -8,11 +8,15 @@
     <string name="ingredients">Ingrédients : %1$s</string>
     <string name="allergenes">Substances allergènes : %1$s</string>
     <string name="additives">Additifs : %1$s</string>
-    <string name="nutrients_landmark">Nutrients landmark per 100g</string>
+    <string name="nutrients_landmark">Repères nutritionnels 100g</string>
     <string name="nutrients_fats">%1$s g de matières grasses / lipides</string>
     <string name="nutrients_satured_fats">%1$s g d\'\acides gras saturés</string>
     <string name="nutrients_sugars">%1$s g de sucres</string>
     <string name="nutrients_salt">%1$s g de sel</string>
+
+    <string name="nutriscore">Nutriscore : </string>
+    <string name="kcal_part"> kCal/part</string>
+
 
     <string name="nutrients_low">en faible quantité</string>
     <string name="nutrients_moderate">en quantité modérée</string>
@@ -35,6 +39,9 @@
     <string name="products_empty_scan_info_button">Cliquez sur le bouton ci-dessous pour commencer.</string>
     <string name="products_empty_scan_button_title">scanner un produit</string>
 
+    <string name="tab_fiche">Fiche</string>
+    <string name="tab_nutrition">Nutrition</string>
+    <string name="tab_tableau">Tableau</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

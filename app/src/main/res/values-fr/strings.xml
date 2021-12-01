@@ -14,6 +14,13 @@
     <string name="nutrients_sugars">%1$s g de sucres</string>
     <string name="nutrients_salt">%1$s g de sel</string>
 
+
+    <string name="nutriscore">Nutriscore : </string>
+    <string name="kcal_part"> kCal/part</string>
+
+
+
+
     <string name="nutrients_low">en faible quantité</string>
     <string name="nutrients_moderate">en quantité modérée</string>
     <string name="nutrients_high">en quantité élevée</string>
@@ -35,7 +42,9 @@
     <string name="products_empty_scan_info_button">Cliquez sur le bouton ci-dessous pour commencer.</string>
     <string name="products_empty_scan_button_title">scanner un produit</string>
 
-
+    <string name="tab_fiche">Fiche</string>
+    <string name="tab_nutrition">Nutrition</string>
+    <string name="tab_tableau">Tableau</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

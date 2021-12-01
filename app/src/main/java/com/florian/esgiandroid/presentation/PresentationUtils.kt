@@ -17,6 +17,11 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.util.concurrent.Executors
 
+
+fun makeTextView(view: View, rId : Int) : TextView {
+    return view.findViewById<TextView>(rId)
+}
+
 fun TextView.setSpannableTextBold(text: String, separator: String = ":") {
     val builder = SpannableStringBuilder(text)
     builder.setSpan(StyleSpan(Typeface.BOLD), 0, text.indexOf(separator) + 1, 0)
