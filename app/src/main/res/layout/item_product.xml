@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/item_product_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/item_product_card_banner"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
+                android:src="@drawable/petitspoidscarottes"
+                android:scaleType="centerCrop"
+                android:contentDescription="" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_product_cl"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item_product_name"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item_product_cl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_name" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="32dp"
+                    android:contentDescription=""
+                    android:src="@drawable/nav_bar_bookmarks"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/item_product_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="15sp"
+                    android:text="@string/brand"
+                    android:id="@+id/item_product_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/item_product_brand"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="25dp">
+
+                    <ImageView
+                        android:src="@drawable/ranking"
+                        android:layout_width="25dp"
+                        android:layout_height="16dp"
+                        android:id="@+id/item_product_icon_nutriscore"
+                        />
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/nutriscore"
+                        />
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/item_product_value_nutriscore"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:src="@drawable/calories"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:id="@+id/item_product_icon_calories"
+                        />
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/item_product_value_calories"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        />
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:text="@string/kcal_part"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

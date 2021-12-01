@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="25dp"
+    tools:context=".presentation.pages.ProductDetailActivity">
+
+    <TextView
+        android:id="@+id/nutrients_landmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nutrients_landmark"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/nutrients_landmark">
+
+        <ImageView
+            android:id="@+id/circle_level"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:contentDescription=""
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@id/tile"
+            app:layout_constraintLeft_toLeftOf="@id/tile"
+            app:layout_constraintTop_toTopOf="@id/tile" />
+
+        <TextView
+            android:id="@+id/tile_fats_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_fats"
+            app:layout_constraintTop_toTopOf="@id/tile" />
+
+        <TextView
+            android:id="@+id/tile_fats_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_low"
+            app:layout_constraintBottom_toBottomOf="@id/tile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tile2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tile"
+
+        >
+
+        <ImageView
+            android:id="@+id/circle_level2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:contentDescription=""
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@id/tile2"
+            app:layout_constraintLeft_toLeftOf="@id/tile2"
+            app:layout_constraintTop_toTopOf="@id/tile2" />
+
+        <TextView
+            android:id="@+id/tile_satured_fats_content"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_satured_fats"
+            app:layout_constraintTop_toTopOf="@id/tile2" />
+
+        <TextView
+            android:id="@+id/tile_satured_fats_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_low"
+            app:layout_constraintBottom_toBottomOf="@id/tile2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tile3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tile2"
+
+        >
+
+        <ImageView
+            android:id="@+id/circle_level3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:contentDescription=""
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@id/tile3"
+            app:layout_constraintLeft_toLeftOf="@id/tile3"
+            app:layout_constraintTop_toTopOf="@id/tile3" />
+
+        <TextView
+            android:id="@+id/tile_sugars_content"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_sugars"
+            app:layout_constraintTop_toTopOf="@id/tile3" />
+
+        <TextView
+            android:id="@+id/tile_sugars_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_moderate"
+            app:layout_constraintBottom_toBottomOf="@id/tile3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tile4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tile3"
+
+        >
+
+        <ImageView
+            android:id="@+id/circle_level4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:contentDescription=""
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@id/tile4"
+            app:layout_constraintLeft_toLeftOf="@id/tile4"
+            app:layout_constraintTop_toTopOf="@id/tile4" />
+
+        <TextView
+            android:id="@+id/tile_salt_content"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_salt"
+            app:layout_constraintTop_toTopOf="@id/tile4" />
+
+        <TextView
+            android:id="@+id/tile_salt_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/nutrients_high"
+            app:layout_constraintBottom_toBottomOf="@id/tile4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
