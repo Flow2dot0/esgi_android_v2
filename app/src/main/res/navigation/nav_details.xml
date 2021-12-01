@@ -8,14 +8,26 @@
     <fragment
         android:id="@+id/tab_fiche"
         android:name="com.florian.esgiandroid.presentation.organisms.ProductDetailsSummaryFragment"
-        android:label="ProductDetailsSummaryFragment" />
+        android:label="ProductDetailsSummaryFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.florian.esgiandroid.domain.DefaultProduct" />
+    </fragment>
     <fragment
         android:id="@+id/tab_nutrition"
         android:name="com.florian.esgiandroid.presentation.organisms.ProductDetailsNutritionFragment"
-        android:label="ProductDetailsNutritionFragment" />
+        android:label="ProductDetailsNutritionFragment" >
+        <argument
+            android:name="nutritionFacts"
+            app:argType="com.florian.esgiandroid.domain.DefaultNutritionFacts" />
+    </fragment>
     <fragment
         android:id="@+id/tab_tableau"
         android:name="com.florian.esgiandroid.presentation.organisms.ProductDetailsNutritionalValuesFragment"
         android:label="fragment_product_details_nutritional_values"
-        tools:layout="@layout/fragment_product_details_nutritional_values" />
+        tools:layout="@layout/fragment_product_details_nutritional_values" >
+        <argument
+            android:name="nutritionValues"
+            app:argType="com.florian.esgiandroid.domain.DefaultNutritionFacts" />
+    </fragment>
 </navigation>

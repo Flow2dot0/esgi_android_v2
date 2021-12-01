@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.activityViewModels
 import com.florian.esgiandroid.R
+import com.florian.esgiandroid.application.SharedViewModel
 import com.florian.esgiandroid.domain.DefaultProduct
 import com.florian.esgiandroid.presentation.formatItemsFromList
 import com.florian.esgiandroid.presentation.makeTextView
@@ -18,16 +20,10 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class ProductDetailsSummaryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val model : SharedViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -35,10 +31,10 @@ class ProductDetailsSummaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val v = inflater.inflate(R.layout.fragment_product_details_summary, container, false)
-        val product = DefaultProduct.dummy()
+        val product = model.product
         val posterView = v.findViewById<ImageView>(R.id.posterView);
         Picasso.get()
-            .load(product.imageUrl)
+            .load(product!!.imageUrl)
             .placeholder(R.drawable.petitspoidscarottes)
             .error(R.drawable.petitspoidscarottes)
             .into(posterView)
@@ -55,17 +51,5 @@ class ProductDetailsSummaryFragment : Fragment() {
 
     private fun setSpannableTextViewBold(textView: TextView, rString : Int, args : String){
         textView.setSpannableTextBold(getString(rString, args))
-    }
-
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProductDetailsSummaryFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }

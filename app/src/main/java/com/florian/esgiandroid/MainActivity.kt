@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = MainActivityBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -25,10 +24,5 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.toolbar_drawable
             )
         )
-//        val navHost = supportFragmentManager.findFragmentById(R.id.product_details_nav_host) as NavHostFragment
-//        setupActionBarWithNavController(navHost.navController)
-
-
-
     }
 }
