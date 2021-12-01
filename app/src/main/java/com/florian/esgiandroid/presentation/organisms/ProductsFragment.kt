@@ -42,7 +42,6 @@ class ProductsFragment : Fragment() {
         val arr = arrayListOf<Product>()
         arr.addAll(model.products)
         myView = attachToRecyclerView(ProductAdapter(arr), inflater, container, savedInstanceState)
-        myView.findViewById<Button>(R.id.fragment_empty_button).setBackgroundResource(R.drawable.elevated_rounded_button)
         onClickListener(myView)
         return myView
     }
