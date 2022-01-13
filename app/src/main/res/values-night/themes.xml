@@ -15,7 +15,8 @@
     </style>
 
     <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
-        <item name="android:statusBarColor">@color/toolbar_gradient_start</item>
+        <item name="android:windowSplashScreenBackground">@color/colorPrimary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
+        <item name="postSplashScreenTheme">@style/BaseTheme</item>
     </style>
 </resources>
