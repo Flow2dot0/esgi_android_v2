@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -15,6 +16,11 @@ import com.florian.esgiandroid.R
 
 
 class EmptyFragment : Fragment() {
+
+    companion object{
+        val TAG = this.toString()
+    }
+
     private lateinit var myView: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,10 +57,12 @@ class EmptyFragment : Fragment() {
             ActivityResultContracts.StartActivityForResult()
         ) {
             when(it.resultCode){
-                Activity.RESULT_CANCELED -> Log.w("EmptyFragment", "Scan cancelled !")
+                Activity.RESULT_CANCELED -> Log.w(TAG, "Scan cancelled !")
                 Activity.RESULT_OK -> {
                     val format = it.data?.getStringExtra("SCAN_RESULT_FORMAT")
                     val res = it.data?.getStringExtra("SCAN_RESULT")
+                    Toast.makeText(context,  "New code : $res", Toast.LENGTH_SHORT).show()
+                    Log.i(TAG, "Scanned, bar code is $res")
                     val action = EmptyFragmentDirections.actionEmptyFragmentToProductsFragment(res!!)
                     myView.findNavController().navigate(action)
                 }

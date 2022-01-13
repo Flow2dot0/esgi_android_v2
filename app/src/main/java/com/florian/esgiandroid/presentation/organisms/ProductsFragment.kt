@@ -9,9 +9,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.activity.result.ActivityResultCaller
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.florian.esgiandroid.R
@@ -23,6 +27,10 @@ import com.florian.esgiandroid.domain.Product
 class ProductsFragment : Fragment() {
     private lateinit var myView: View
     private val model : SharedViewModel by activityViewModels()
+
+    companion object{
+        private val TAG = this.toString()
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,18 +77,18 @@ class ProductsFragment : Fragment() {
         registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) {
-            if (it.resultCode == Activity.RESULT_OK) {
-                val format = it.data?.getStringExtra("SCAN_RESULT_FORMAT")
-                val res = it.data?.getStringExtra("SCAN_RESULT")
-                
-
-                val product = DefaultProduct.generateDummy()
-                product.updateBarcode(res!!.toLong())
-                model.add(product)
-            }
-
-            if (it.resultCode == Activity.RESULT_CANCELED) {
-                Log.e("EmptyFragment", "Scan cancelled !")
+            when(it.resultCode){
+                Activity.RESULT_CANCELED -> Log.w(EmptyFragment.TAG, "Scan cancelled !")
+                Activity.RESULT_OK -> {
+                    val format = it.data?.getStringExtra("SCAN_RESULT_FORMAT")
+                    val res = it.data?.getStringExtra("SCAN_RESULT")
+                    val product = DefaultProduct.generateDummy()
+                    product.updateBarcode(res!!.toLong())
+                    model.add(product)
+                    Toast.makeText(context,  "New code : $res",Toast.LENGTH_SHORT).show()
+                    Log.i(EmptyFragment.TAG, "Scanned, bar code is $res")
+                }
             }
         }
 }
+
