@@ -5,6 +5,8 @@ import android.graphics.BitmapFactory
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
+import org.json.JSONArray
+import org.json.JSONObject
 import java.net.URL
 import kotlin.random.Random
 
@@ -56,6 +58,23 @@ data class DefaultProduct(
     }
 
     companion object {
+//        fun fromJson(str : String): Product {
+//            val jsonObj = JSONObject(str)
+//            val json = jsonObj.toMap()
+//            json.get()
+//            return DefaultProduct(
+//                json["generic_name"] as String,
+//                json["brands"] as String,
+//                json["id"] as Long,
+//                json["nutriscore_data"]["grade"] as String,
+//                json["image_url"] as String,
+//                json["owner_fields"]["quantity"] as Int,
+//                listOf(json["countries"] as String),
+//                json["ingredients"] as List<Any>.
+//                json["image_url"]
+//            )
+//        }
+
         fun dummy(): Product {
             return DefaultProduct(
                 "Petits pois et carottes",
@@ -132,4 +151,19 @@ data class DefaultProduct(
 
 fun DefaultProduct.toImage(): Bitmap {
     return BitmapFactory.decodeStream(URL(this.imageUrl).openConnection().getInputStream())
+}
+
+
+fun JSONObject.toMap(): Map<String, *> = keys().asSequence().associateWith {
+    when (val value = this[it])
+    {
+        is JSONArray ->
+        {
+            val map = (0 until value.length()).associate { Pair(it.toString(), value[it]) }
+            JSONObject(map).toMap().values.toList()
+        }
+        is JSONObject -> value.toMap()
+        JSONObject.NULL -> null
+        else            -> value
+    }
 }

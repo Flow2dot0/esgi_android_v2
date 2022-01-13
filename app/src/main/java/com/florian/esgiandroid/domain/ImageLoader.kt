@@ -1,13 +1,11 @@
 package com.florian.esgiandroid.domain
 
-import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.florian.esgiandroid.R
 import com.squareup.picasso.Picasso
 
 interface ImageLoader {
     fun loadInto(imageUrl : String, placeholder: Int = R.drawable.petitspoidscarottes, replacementOnError : Int = R.drawable.petitspoidscarottes, destination : ImageView)
-
 }
 
 class PicassoImageLoader : ImageLoader {

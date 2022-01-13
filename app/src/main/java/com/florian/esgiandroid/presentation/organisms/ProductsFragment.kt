@@ -72,6 +72,8 @@ class ProductsFragment : Fragment() {
             if (it.resultCode == Activity.RESULT_OK) {
                 val format = it.data?.getStringExtra("SCAN_RESULT_FORMAT")
                 val res = it.data?.getStringExtra("SCAN_RESULT")
+                
+
                 val product = DefaultProduct.generateDummy()
                 product.updateBarcode(res!!.toLong())
                 model.add(product)

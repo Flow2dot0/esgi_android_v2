@@ -50,16 +50,14 @@ class EmptyFragment : Fragment() {
         registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) {
-            if (it.resultCode == Activity.RESULT_OK) {
+            when(it.resultCode){
+                Activity.RESULT_CANCELED -> Log.w("EmptyFragment", "Scan cancelled !")
+                Activity.RESULT_OK -> {
                     val format = it.data?.getStringExtra("SCAN_RESULT_FORMAT")
                     val res = it.data?.getStringExtra("SCAN_RESULT")
-
-                val action = EmptyFragmentDirections.actionEmptyFragmentToProductsFragment(res!!)
-                myView.findNavController().navigate(action)
-            }
-
-            if (it.resultCode == Activity.RESULT_CANCELED) {
-                Log.e("EmptyFragment", "Scan cancelled !")
+                    val action = EmptyFragmentDirections.actionEmptyFragmentToProductsFragment(res!!)
+                    myView.findNavController().navigate(action)
+                }
             }
         }
 
